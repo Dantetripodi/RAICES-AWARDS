@@ -1,0 +1,5 @@
+{
+  "name": "Superlativos Escolares",
+  "description": "Una aplicación divertida para votar por alumnos en diferentes categorías. Incluye generación de categorías con IA y análisis de resultados.",
+  "requestFramePermissions": []
+}
