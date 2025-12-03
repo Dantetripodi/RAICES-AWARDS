@@ -1,51 +1,84 @@
 import { Nominee, Category } from './types';
 
 export const APP_STORAGE_KEY = 'superlativos-app-data';
-export const DEFAULT_NOMINEES: Nominee[] = [
-  { id: '1', name: 'Ana Garcia', avatar: '👩' },
-  { id: '2', name: 'Carlos Ruiz', avatar: '🧑' },
-  { id: '3', name: 'Sofia Lopez', avatar: '👱‍♀️' },
-  { id: '4', name: 'Miguel Angel', avatar: '🧒' },
-  { id: '5', name: 'Lucia Diaz', avatar: '👧' },
-  { id: '6', name: 'Pedro Martinez', avatar: '👨' },
-  { id: '7', name: 'Maria Fernandez', avatar: '👩‍🦱' },
-  { id: '8', name: 'Juan Perez', avatar: '🧔' },
+
+
+
+export const AWARDS_NOMINEES: Nominee[] = [
+  { id: 'nom_1', name: 'Mono', avatar: '🐵' },
+  { id: 'nom_2', name: 'Lucas', avatar: '👤' },
+  { id: 'nom_3', name: 'Carme', avatar: '👤' },
+  { id: 'nom_4', name: 'Ludmi', avatar: '👤' },
+  { id: 'nom_5', name: 'Mia', avatar: '👤' },
+  { id: 'nom_6', name: 'Mora', avatar: '👤' },
+  { id: 'nom_7', name: 'Rama', avatar: '👤' },
+  { id: 'nom_8', name: 'Lucho', avatar: '👤' },
+  { id: 'nom_9', name: 'Luca', avatar: '👤' },
+  { id: 'nom_10', name: 'Dome', avatar: '👤' },
+  { id: 'nom_11', name: 'Mateo', avatar: '👤' },
+  { id: 'nom_12', name: 'Thiago', avatar: '👤' },
+  { id: 'nom_13', name: 'Mati', avatar: '👤' },
 ];
+
+const getNomineesByName = (...names: string[]): Nominee[] => {
+  return names.map(name => AWARDS_NOMINEES.find(n => n.name.toLowerCase() === name.toLowerCase())!).filter(Boolean);
+};
 
 export const DEFAULT_CATEGORIES: Category[] = [
   {
-    id: 'cat_1',
-    title: 'El más Gracioso',
-    description: '¿Quién siempre hace reír a la clase?',
-    emoji: '😂',
-    nominees: DEFAULT_NOMINEES
+    id: 'cat_6',
+    title: 'Premio Revelación',
+    description: '¿Quién ha sido la gran revelación?',
+    emoji: '⭐',
+    nominees: getNomineesByName('Mono', 'Lucas')
   },
   {
-    id: 'cat_2',
-    title: 'Futuro Presidente',
-    description: '¿Quién es el más organizado y líder?',
-    emoji: '👔',
-    nominees: DEFAULT_NOMINEES
+    id: 'cat_7',
+    title: 'Premio Mujer/Hombre que Resuelve',
+    description: '¿Quién siempre resuelve todo?',
+    emoji: '🛠️',
+    nominees: getNomineesByName('Carme','Luca','Mia')
   },
   {
-    id: 'cat_3',
-    title: 'Más Estudioso',
-    description: '¿Quién siempre saca las mejores notas?',
-    emoji: '📚',
-    nominees: DEFAULT_NOMINEES
+    id: 'cat_8',
+    title: 'Premio al Enano Pajero',
+    description: '¿Quién es el más pajero?',
+    emoji: '😏',
+    nominees: getNomineesByName('Ludmi', 'Mia', 'Mora','Mono')
   },
   {
-    id: 'cat_4',
-    title: 'Más Deportista',
-    description: '¿Quién es el mejor en deportes?',
-    emoji: '⚽',
-    nominees: DEFAULT_NOMINEES
+    id: 'cat_9',
+    title: 'Premio al Más 🏳️‍🌈',
+    description: '¿Quién es el más 🏳️‍🌈?',
+    emoji: '🏳️‍🌈',
+    nominees: getNomineesByName('Mono', 'Rama', 'Lucho')
   },
   {
-    id: 'cat_5',
-    title: 'Más Artístico',
-    description: '¿Quién tiene más talento creativo?',
-    emoji: '🎨',
-    nominees: DEFAULT_NOMINEES
+    id: 'cat_10',
+    title: 'Premio al Más Infiel',
+    description: '¿Quién es el más infiel?',
+    emoji: '💔',
+    nominees: getNomineesByName('Luca', 'Dome','Lucho')
+  },
+  {
+    id: 'cat_11',
+    title: 'Premio al que Mejor se Expresa',
+    description: '¿Quién se expresa mejor?',
+    emoji: '💬',
+    nominees: getNomineesByName('Lucho', 'Dome','Thiago')
+  },
+  {
+    id: 'cat_12',
+    title: 'Premio al Mejor Ingreso',
+    description: '¿Quién tuvo el mejor ingreso?',
+    emoji: '🎯',
+    nominees: getNomineesByName('Mateo', 'Thiago', 'Mati','Bauti')
+  },
+  {
+    id: 'cat_13',
+    title: 'Premio al Compromiso',
+    description: '¿Quién tiene más compromiso?',
+    emoji: '🤝',
+    nominees: getNomineesByName('Lucas', 'Cande', 'Maya')
   }
 ];
