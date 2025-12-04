@@ -82,7 +82,7 @@ export const DEFAULT_CATEGORIES: Category[] = [
   {
     id: 'cat_14',
     title: 'Guia mas zorra',
-    description: '¿Quién es la guia mas Infi...?',
+    description: '¿Quién  es la guia mas Infi...?',
     emoji: '👹',
     nominees: getNomineesByName('Selu')
   }
