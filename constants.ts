@@ -19,7 +19,10 @@ export const AWARDS_NOMINEES: Nominee[] = [
   { id: 'nom_14', name: 'Bauti', avatar: '👤' },
   { id: 'nom_15', name: 'Cande', avatar: '👤' },
   { id: 'nom_16', name: 'Maya', avatar: '👤' },
-  { id: 'nom_17', name: 'Selu', avatar: '👤' }
+  { id: 'nom_17', name: 'Selu', avatar: '👤' },
+  { id: 'nom_18', name: 'China', avatar: '👤' },
+  { id: 'nom_19', name: 'Dante y Martin', avatar: '👤' },
+  { id: 'nom_20', name: 'Martin', avatar: '👤' }
 ];
 
 const getNomineesByName = (...names: string[]): Nominee[] => {
@@ -88,6 +91,13 @@ export const DEFAULT_CATEGORIES: Category[] = [
     title: 'Guia mas zorra',
     description: '¿Quién  es la guia mas Infi...?',
     emoji: '👹',
-    nominees: getNomineesByName('Selu')
+    nominees: getNomineesByName('Selu','China')
+  },
+  {
+    id: 'cat_15',
+    title: 'Guia mas lindo',
+    description: '¿Guia mas lindo.?',
+    emoji: '👹',
+    nominees: getNomineesByName('dante y martin')
   }
 ];
