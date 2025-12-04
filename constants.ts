@@ -78,5 +78,12 @@ export const DEFAULT_CATEGORIES: Category[] = [
     description: '¿Quién tiene más compromiso?',
     emoji: '🤝',
     nominees: getNomineesByName('Lucas', 'Cande', 'Maya')
+  },
+  {
+    id: 'cat_14',
+    title: 'Guia mas zorra',
+    description: '¿Quién  es la guia mas Infi...?',
+    emoji: '👹',
+    nominees: getNomineesByName('Selu')
   }
 ];
