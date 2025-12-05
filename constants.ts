@@ -29,7 +29,9 @@ export const AWARDS_NOMINEES: Nominee[] = [
   { id: 'nom_24', name: 'Cuba', avatar: '👤' },
   { id: 'nom_25', name: 'Mateo culon', avatar: '👤' },
   { id: 'nom_26', name: 'Matias', avatar: '👤' },
-  { id: 'nom_27', name: 'Joaco', avatar: '👤' }
+  { id: 'nom_27', name: 'Joaco', avatar: '👤' },
+  { id: 'nom_28', name: 'Fiore', avatar: '👤' }
+
 
 
 ];
@@ -58,7 +60,7 @@ export const DEFAULT_CATEGORIES: Category[] = [
     title: 'Premio al Enano Pajero',
     description: '¿Quién es el más pajero?',
     emoji: '😏',
-    nominees: getNomineesByName('Ludmi', 'Mia', 'Mora')
+    nominees: getNomineesByName('Ludmi', 'Mia', 'Mora','Fiore')
   },
   {
     id: 'cat_4',
@@ -72,7 +74,7 @@ export const DEFAULT_CATEGORIES: Category[] = [
     title: 'Premio al Más Infiel',
     description: '¿Quién es el más infiel?',
     emoji: '💔',
-    nominees: getNomineesByName('Luca', 'Dome','Brune','Maia')
+    nominees: getNomineesByName('Luca', 'Dome','Brune','Maia','Fiore')
   },
   {
     id: 'cat_6',
